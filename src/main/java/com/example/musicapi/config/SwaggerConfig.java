@@ -21,12 +21,6 @@ public class SwaggerConfig{
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.musicapi.controller"))
                 .paths(PathSelectors.any())
-                .build()
-                .apiInfo(new ApiInfoBuilder()
-                        .title("Music API")
-                        .description("Music API Description")
-                        .version("1.0")
-                        .license("MIT")
-                        .build());
+                .build();
     }
 }
