@@ -2,7 +2,6 @@ package com.example.musicapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -11,7 +10,6 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.Collections;
 
 @Configuration
 @EnableSwagger2
@@ -32,7 +30,7 @@ public class SwaggerConfig{
                 "Music API Description",
                 "1.0",
                 "http://terms.com",
-                new Contact("ariel triviño", "https://arieldev.netlify.app/", "arielrnr1995@gmail.com"),
+                new Contact("ariel trivino", "https://arieldev.netlify.app/", "arielrnr1995@gmail.com"),
                 "LICENSE",
                 "LICENSE URL"
         );
