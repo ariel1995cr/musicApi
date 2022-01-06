@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=default -Dserver.port=$PORT -jar target/*.jar --spring.profiles.active=prod,api-docs,heroku
+web: java -Dserver.port=$PORT -jar target/*.jar
