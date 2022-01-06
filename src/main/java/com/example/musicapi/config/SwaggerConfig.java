@@ -2,6 +2,7 @@ package com.example.musicapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -21,18 +22,11 @@ public class SwaggerConfig{
                 .apis(RequestHandlerSelectors.basePackage("com.example.musicapi.controller"))
                 .paths(PathSelectors.any())
                 .build()
-                .apiInfo(getApiInfo());
-    }
-
-    private ApiInfo getApiInfo(){
-        return new ApiInfo(
-                "Music API",
-                "Music API Description",
-                "1.0",
-                "http://terms.com",
-                new Contact("ariel trivino", "https://arieldev.netlify.app/", "arielrnr1995@gmail.com"),
-                "LICENSE",
-                "LICENSE URL"
-        );
+                .apiInfo(new ApiInfoBuilder()
+                        .title("Music API")
+                        .description("Music API Description")
+                        .version("1.0")
+                        .license("MIT")
+                        .build());
     }
 }
